@@ -20,6 +20,10 @@ import java.util.Date
 import java.util.Locale
 
 class MainActivity : Activity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    render()
+}
     private val defaults = listOf("YouTube", "IPTV Stream Player", "Zapping", "Netflix", "Prime Video", "HBO Max", "Play Store")
     private val prefs by lazy { getSharedPreferences("cyberpunk_launcher", MODE_PRIVATE) }
     private val handler = Handler(Looper.getMainLooper())
